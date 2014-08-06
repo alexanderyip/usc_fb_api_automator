@@ -4,23 +4,15 @@ import codecs
 import os
 from datetime import date,timedelta,datetime
 
-user = 'yip'
-pw = 'Password5'
+user = 'XX'
+pw = 'XX'
 #conn_str = 'DRIVER={SQL Server};SERVER=madb;DATABASE=AnalyticsTestDB;UID='+user+';PWD='+pw
 conn_str = 'DRIVER={SQL Server};SERVER=madb;DATABASE=AnalyticsTestDB;Trusted_Connection=yes'
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
-os.chdir('C:\\Users\\ayip\\Documents\\python scripts')
-#app_id = '466514266809468'
-#app_secret = '7a4e0158e9be931491723a7e3c2858e7'
-#
-#app_token = facebook.get_app_access_token(app_id,app_secret)
-#print app_token
-#
-#r = requests.get('https://graph.facebook.com/oauth/access_token?grant_type=client_credentials&client_id='+app_id+'&client_secret='+app_secret)
-#access_token = r.text.split('=')[1]
-#print access_token
+os.chdir('XX')
+
 form_id = ["u_0_e","u_0_a","u_0_b","u_0_c","u_0_d"]
 log = open('log.txt','w')
 import win32com.client
@@ -46,7 +38,6 @@ w.iimClose()
 log.write('Got a token!\n')
 print 'Got a token!'
 #if we need to hard code a token
-#access_token = 'CAACEdEose0cBAFy1JgBaYlyQrLBIBZAyZAdZBJupuTasg3TV86v5VLZCouN0lXZAZB4TiHku5r2yvUgbOCyVB7BAEm182UbE7NMQBWFMTTMpcWXVePlnpplJ9kZAPaqjYEn2n1y0ZAwK9djVOreOu1MT6LRSJcVFWbrc3xUCyiKFYV3WZCB5dRrq9DSq5UuVLMkcZD'
 graph = facebook.GraphAPI(access_token)
 FB_PAGE_DB = 'USCellular_FB_Page'
 FB_POST_INFO_DB = 'USCellular_FB_Post_Info'

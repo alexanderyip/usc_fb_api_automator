@@ -8,8 +8,8 @@ Created on Wed Mar 05 10:40:16 2014
 import facebook
 import pyodbc
 
-user = 'yip'
-pw = 'Password5'
+user = 'XX'
+pw = 'XX'
 #conn_str = 'DRIVER={SQL Server};SERVER=madb;DATABASE=AnalyticsTestDB;UID='+user+';PWD='+pw
 conn_str = 'DRIVER={SQL Server};SERVER=madb;DATABASE=AnalyticsTestDB;Trusted_Connection=yes'
 conn = pyodbc.connect(conn_str)
@@ -37,8 +37,6 @@ access_token = w.iimGetLastExtract()
 w.iimClose()
 
 print 'Got a token!'
-#access_token = 'CAACEdEose0cBAA1GjCT0q5gvNBA41S3BeAoUefQVU9xYPhdvmHlhsla6deSRC6OZBUJOyAu17O2j85ZAgQWaIWNTNPe5ocZCVZArJw2F8Kom1qjTZAvwTdlmFASQ7YZBL1IaGHfufUyu4dKJqNuEdBeq8EEK5U4fjT4zZChrRcRkzO4HbYbqCbq97YAovcZC8dwZD'
-
 graph = facebook.GraphAPI(access_token)
 FB_PAGE_DB = 'USCellular_FB_Page'
 
